@@ -59,7 +59,13 @@ web course            </a>
                             <a href="/category/django.html">Django</a>
                         </li>
                         <li >
+                            <a href="/category/django-python.html">Django, python</a>
+                        </li>
+                        <li >
                             <a href="/category/linux.html">Linux</a>
+                        </li>
+                        <li >
+                            <a href="/category/pelican.html">Pelican</a>
                         </li>
                         <li class="active">
                             <a href="/category/python.html">Python</a>
@@ -77,9 +83,26 @@ web course            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
-                <h2><a href="/run-python-script.html">Run python script</a></h2>
-                <div class="summary"><h2>Run python script</h2>
-<p>Every python script has a .py extention.
+                <h2><a href="/virtual-environment.html">Pythov virtual environment.</a></h2>
+                <div class="summary"><p>A Virtual Environment is a tool to keep the dependencies required by different projects in separate places, by creating virtual Python environments for them.</p>
+<div class="highlight"><pre><span></span>sudo apt-get install python-virtualenv
+</pre></div>
+
+
+<h3>Creating virtual environment</h3>
+<div class="highlight"><pre><span></span>virtualenv blog_ve
+</pre></div>
+
+
+<p>This command will create a new folder in the current directory with specific structure.
+Also it will ...</p>
+                    <a class="btn btn-default btn-xs" href="/virtual-environment.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/run-python-script.html">Run python script.</a></h2>
+                <div class="summary"><p>Every python script has a .py extention.
 Let's create our first "Hello world" programm.</p>
 <div class="highlight"><pre><span></span>echo &#39;print &quot;Hello World&quot; &#39; &gt; hello.py
 </pre></div>
@@ -90,52 +113,8 @@ Let's create our first "Hello world" programm.</p>
 </pre></div>
 
 
-<p>But there is another and ...</p>
+<p>But there is another and more convenient way ...</p>
                     <a class="btn btn-default btn-xs" href="/run-python-script.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/django-commands.html">Django. Commands.</a></h2>
-                <div class="summary"><h1>Django commands</h1>
-<p>To register a new command we need to add a <strong>managment/commands</strong> direclory to our application. Each folder should containe <code>__init</code>__.py to indicate that this folders should be concern as the packages.</p>
-<h2>Simple example</h2>
-<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.core.management.base</span> <span class="kn">import</span> <span class="n">BaseCommand</span><span class="p">,</span> <span class="n">CommandError</span>
-<span class="kn">from</span> <span class="nn">page.models</span> <span class="kn">import ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="/django-commands.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/virtual-environment.html">Pythov virtual environment</a></h2>
-                <div class="summary"><h2>Pythov virtual environment</h2>
-<p>A Virtual Environment is a tool to keep the dependencies required by different projects in separate places, by creating virtual Python environments for them.</p>
-<div class="highlight"><pre><span></span>sudo apt-get install python-virtualenv
-</pre></div>
-
-
-<h3>Creating virtual environment</h3>
-<div class="highlight"><pre><span></span>virtualenv blog_ve
-</pre></div>
-
-
-<p>This command will create a new folder in the current directory with specific structure ...</p>
-                    <a class="btn btn-default btn-xs" href="/virtual-environment.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/pelican-installation-and-setting.html">Pelican installation and setting.</a></h2>
-                <div class="summary"><h1>Pelican</h1>
-<h2>Creating a new project.</h2>
-<div class="highlight"><pre><span></span>mkdir site
-cd site
-pelican-quickstart
-</pre></div>
-
-
-<h2>Index file.</h2>
-                    <a class="btn btn-default btn-xs" href="/pelican-installation-and-setting.html">more ...</a>
                 </div>
             </article>
             <hr/>

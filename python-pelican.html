@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Bootstrap installation. - web course</title>
+    <title>Pelican installation and setting. - web course</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,18 +9,18 @@
 
 
 
-<link rel="canonical" href="/bootstrap-installation.html">
+<link rel="canonical" href="/python-pelican.html">
 
         <meta name="author" content="Dmitry Zharikov" />
-        <meta name="description" content="Bootstrap is the most popular HTML, CSS, and JS framework for developing projects on the web. Installation. npm install bootstrap Package.json. { &#34;name&#34;: &#34;&#34;, &#34;version&#34;: &#34;0.0.1&#34;, &#34;author&#34;: &#34;&#34;, &#34;description&#34;: &#34;blabla&#34;, &#34;license&#34;: &#34;FREEEE&#34;, &#34;dependencies&#34;: {} } Installing with saving dependencies. npm install bootstrap --save Make sure that you have npm and nodejs installed ..." />
+        <meta name="description" content="Pelican Creating a new project. mkdir site cd site pelican-quickstart Index file." />
 
         <meta property="og:site_name" content="web course" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Bootstrap installation."/>
-        <meta property="og:url" content="/bootstrap-installation.html"/>
-        <meta property="og:description" content="Bootstrap is the most popular HTML, CSS, and JS framework for developing projects on the web. Installation. npm install bootstrap Package.json. { &#34;name&#34;: &#34;&#34;, &#34;version&#34;: &#34;0.0.1&#34;, &#34;author&#34;: &#34;&#34;, &#34;description&#34;: &#34;blabla&#34;, &#34;license&#34;: &#34;FREEEE&#34;, &#34;dependencies&#34;: {} } Installing with saving dependencies. npm install bootstrap --save Make sure that you have npm and nodejs installed ..."/>
+        <meta property="og:title" content="Pelican installation and setting."/>
+        <meta property="og:url" content="/python-pelican.html"/>
+        <meta property="og:description" content="Pelican Creating a new project. mkdir site cd site pelican-quickstart Index file."/>
         <meta property="article:published_time" content="2016-11-04" />
-            <meta property="article:section" content="css" />
+            <meta property="article:section" content="pelican" />
             <meta property="article:author" content="Dmitry Zharikov" />
 
 
@@ -55,7 +55,7 @@ web course            </a>
                         <li >
                             <a href="/category/bash.html">Bash</a>
                         </li>
-                        <li class="active">
+                        <li >
                             <a href="/category/css.html">Css</a>
                         </li>
                         <li >
@@ -67,7 +67,7 @@ web course            </a>
                         <li >
                             <a href="/category/linux.html">Linux</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="/category/pelican.html">Pelican</a>
                         </li>
                         <li >
@@ -89,10 +89,10 @@ web course            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="/bootstrap-installation.html"
+                    <a href="/python-pelican.html"
                        rel="bookmark"
-                       title="Permalink to Bootstrap installation.">
-                        Bootstrap installation.
+                       title="Permalink to Pelican installation and setting.">
+                        Pelican installation and setting.
                     </a>
                 </h1>
             </header>
@@ -102,7 +102,7 @@ web course            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2016-11-04T17:53:39.564561+01:00"> Пт. 04 Ноябрь 2016</time>
+        <i class="fa fa-calendar"></i><time datetime="2016-11-04T17:55:09.584571+01:00"> Пт. 04 Ноябрь 2016</time>
     </span>
 
 
@@ -112,61 +112,15 @@ web course            </a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing projects on the web.</p>
-<h2>Installation.</h2>
-<div class="highlight"><pre><span></span>npm install bootstrap
+                <h1>Pelican</h1>
+<h2>Creating a new project.</h2>
+<div class="highlight"><pre><span></span>mkdir site
+cd site
+pelican-quickstart
 </pre></div>
 
 
-<h3>Package.json.</h3>
-<div class="highlight"><pre><span></span>{
-  &quot;name&quot;: &quot;&quot;,
-  &quot;version&quot;: &quot;0.0.1&quot;,
-  &quot;author&quot;: &quot;&quot;,
-  &quot;description&quot;: &quot;blabla&quot;,
-  &quot;license&quot;: &quot;FREEEE&quot;,
-  &quot;dependencies&quot;: {}
-}
-</pre></div>
-
-
-<p>Installing with saving dependencies.</p>
-<div class="highlight"><pre><span></span>npm install bootstrap --save
-</pre></div>
-
-
-<p>Make sure that you have npm and nodejs installed.
-If no, you can install it by this commands:</p>
-<div class="highlight"><pre><span></span>sudo apt-get install nodejs
-sudo apt-get install npm
-</pre></div>
-
-
-<p>After installing bootstrap you will have it inside node_modules folder.
-Also, you will have a tool to build css and js files using GRUNT.</p>
-<h3>GRUNT</h3>
-<p>Grund is Javascript task runner. It collect your css and js files, compress them and make compact (min) version of them. This process is called as build.
-To build bootstrap files you have to be inside bootstrap folder and run this command:</p>
-<div class="highlight"><pre><span></span>grunt build
-</pre></div>
-
-
-<p>If you see somethink like</p>
-<div class="highlight"><pre><span></span>No command &#39;grunt&#39; found
-</pre></div>
-
-
-<p>you need to install dependecsies</p>
-<div class="highlight"><pre><span></span>npm install
-</pre></div>
-
-
-<p>It will get a list of the all dependencies from the package.json file download it and install into node_modules folder.</p>
-<h3>Available grunt commands</h3>
-<h4>grunt dist</h4>
-<p>Regenerates the /dist/ directory with compiled and minified CSS and JavaScript files.</p>
-<h4>grunt watch</h4>
-<p>Watches the Less source files and automatically recompiles them to CSS whenever you save a change.</p>
+<h2>Index file.</h2>
             </div>
             <!-- /.entry-content -->
         </article>
