@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>web course - python</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">web course </a></h1>
+                <nav><ul>
+                    <li><a href="/">Web course</a></li>
+                    <li><a href="/category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/django-static-page-application.html">Static pages applicaion.</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-11-04T15:24:23.712024+01:00">
+                Published: Пт. 04 Ноябрь 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>tags: <a href="/tag/django.html">django</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info --><h2>Dlango. Static pages applicaion.</h2>
+<p>We will use django-ckeditor-updated package for wisiwig editor.
+Make sure that you have instalated this packages:</p>
+<div class="highlight"><pre><span></span>Django==1.10
+django-ckeditor-updated==4.4
+</pre></div>
+
+
+<p>You can put them into requirements.txt file and the inslall isung pip installer this way:</p>
+<div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+
+
+<p>Attribute -r means that requirements.txt is not the name of the packege but resource file.</p>
+<p>To start our application and create a new directory launch this command:</p>
+<div class="highlight"><pre><span></span>./manage.py startapp pages
+</pre></div>
+
+
+<p>Edit page/models.py and add model (table).</p>
+<div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;Title&#39;</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">meta_content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+    <span class="n">meta_title</span> <span class="o">=</span>   <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+    <span class="n">meta_keywords</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+    <span class="n">slug</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;Magic word&#39;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Add the page application to INSTALLED_APPS list.</p>
+<div class="highlight"><pre><span></span>INSTALLED_APPS = [
+    &#39;django.contrib.admin&#39;,
+    ....
+    &#39;page&#39;,
+]
+</pre></div>
+
+
+<p>Create tables.</p>
+<div class="highlight"><pre><span></span>./manage.py makemigrations
+./manage.py migrate
+</pre></div>
+
+
+<p>Running server.</p>
+<div class="highlight"><pre><span></span>./manage.py runserver 5555
+</pre></div>
+
+
+<p>Enable admin interface page/admin.py.</p>
+<div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">page.models</span> <span class="kn">import</span> <span class="n">Page</span>
+
+<span class="k">class</span> <span class="nc">PageAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">PageAdmin</span><span class="p">)</span>
+</pre></div>                </article>
+            </aside><!-- /#featured -->
+        <section id="extras" class="body">
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Manage with users in Linux.</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">web course </a></h1>
+                <nav><ul>
+                    <li><a href="/">Web course</a></li>
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/linux-manage-users.html" rel="bookmark"
+           title="Permalink to Manage with users in Linux.">Manage with users in Linux.</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-04T15:20:24.640826+01:00">
+                Published: Пт. 04 Ноябрь 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>.</p>
+
+</footer><!-- /.post-info -->      <h2>Manage with users in Linux.</h2>
+<h3>/etc/passwd</h3>
+<p>Contains one line for each user account.</p>
+<p>Username:Password:User ID:Group ID:User ID Info:Home directory:Command/shell</p>
+<p>Password - An x character indicates that encrypted password is stored in /etc/shadow file.</p>
+<p>User ID (UID): </p>
+<p>0 (zero) is reserved for root and UIDs </p>
+<p>1-99 are reserved for other predefined accounts. </p>
+<p>100-999 are reserved by system for administrative and system accounts/groups.</p>
+<p>Group ID (GID): The primary group ID (stored in /etc/group file)</p>
+<h3>/etc/passwd file permission</h3>
+<div class="highlight"><pre><span></span>ls -l /etc/passwd
+</pre></div>
+
+
+<h3>Directory permission</h3>
+<div class="highlight"><pre><span></span>ls -ld zdimon
+</pre></div>
+
+
+<h3>Get information</h3>
+<div class="highlight"><pre><span></span>grep zdimon /etc/passwd
+</pre></div>
+
+
+<h3>Adding user</h3>
+<div class="highlight"><pre><span></span>adduser &lt;username&gt;
+</pre></div>
+
+
+<h3>Change user</h3>
+<div class="highlight"><pre><span></span>su &lt;username&gt;
+</pre></div>
+
+
+<p>Ctr+d - to get back</p>
+<h3>Add user to sudores</h3>
+<div class="highlight"><pre><span></span>sudo adduser &lt;username&gt; sudo
+</pre></div>
+
+
+<h3>Add user to group</h3>
+<div class="highlight"><pre><span></span>useradd -G &lt;&gt; username
+</pre></div>
+
+
+<p>This will create a new user and add it to group.</p>
+<div class="highlight"><pre><span></span>usermod -a -G zdimon test
+</pre></div>
+
+
+<h1>Changing permissions using <code>chmod</code></h1>
+<p>read (<code>r'), write (</code>w'), and execute (`x')</p>
+<div class="highlight"><pre><span></span> chmod u=rx file
+</pre></div>
+
+
+<p>(Give the owner rx permissions, not w)</p>
+<div class="highlight"><pre><span></span> chmod go-rwx file
+</pre></div>
+
+
+<p>(Deny rwx permission for group, others)</p>
+<div class="highlight"><pre><span></span> chmod g+w file
+</pre></div>
+
+
+<p>(Give write permission to the group)</p>
+<div class="highlight"><pre><span></span> chmod a+x file1 file2
+</pre></div>
+
+
+<p>(Give execute permission to everybody)</p>
+<div class="highlight"><pre><span></span> chmod g+rx,o+x file
+</pre></div>
+
+
+<p>(OK to combine like this with a comma)</p>
+<h2>Deleting user</h2>
+<div class="highlight"><pre><span></span>deluser --remove-home userName
+</pre></div>
+
+
+<h2>Locale issues</h2>
+<div class="highlight"><pre><span></span>sudo locale-gen &quot;en_US.UTF-8&quot;
+sudo locale-gen &quot;ru_RU.UTF-8&quot;
+export LC_ALL=C
+</pre></div>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

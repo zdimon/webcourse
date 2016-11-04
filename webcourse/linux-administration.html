@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Linux packages administration</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">web course </a></h1>
+                <nav><ul>
+                    <li><a href="/">Web course</a></li>
+                    <li class="active"><a href="/category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/linux-administration.html" rel="bookmark"
+           title="Permalink to Linux packages administration">Linux packages administration</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-04T15:48:51.770956+01:00">
+                Published: Пт. 04 Ноябрь 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
+        </address>
+<p>In <a href="/category/misc.html">misc</a>.</p>
+
+</footer><!-- /.post-info -->      <h2>Linux packages administration.</h2>
+<p><a href="/webcourse/linux-administration.html">link.</a></p>
+<h3>APT Advanced Packaging Tool</h3>
+<p>It is perfoming such function as:</p>
+<ul>
+<li>installation of new software</li>
+<li>removing software</li>
+<li>upgrade and update of existing software</li>
+<li>updating of the package list index</li>
+<li>
+<p>upgrating entire Ubuntu system</p>
+</li>
+<li>
+<p>Install a Package</p>
+<p>sudo apt-get install mc</p>
+</li>
+</ul>
+<p><em>sudo</em> - because we need the right to create/update files in system directories
+<em>apt-get</em> - Advanced Packaging Tool command
+<em>install</em> - what we wana do
+<em>mc</em> - name of the software <package-name></p>
+<ol>
+<li>
+<p>Remove a package</p>
+<p>sudo apt-get remove <package-name>
+sudo apt-get purge <package-name></p>
+</li>
+</ol>
+<p><em>remove</em> - does not include configuration files</p>
+<ol>
+<li>Updating Package Index.</li>
+</ol>
+<p>The APT package index is essentially a database of available packages from the repositories defined in the /etc/apt/sources.list file and in the /etc/apt/sources.list.d directory.</p>
+<div class="highlight"><pre><span></span>sudo apt-get update
+</pre></div>
+
+
+<p>This command updates your package index with last changes made in the repositories.</p>
+<p>To see your list of packages you can run this command</p>
+<div class="highlight"><pre><span></span>nano /etc/apt/sources.list
+</pre></div>
+
+
+<ol>
+<li>
+<p>Upgrade Packages</p>
+<p>sudo apt-get upgrade</p>
+</li>
+</ol>
+<p><em>apt-get update</em> - updates the list of available packages and their versions, but it does not install or upgrade any packages.</p>
+<p><em>apt-get upgrade</em> - actually installs newer versions of the packages you have.</p>
+<p>The fist thing what you are going to do after Ubuntu instalation is updating your repository by <em>apt-get update</em> command.
+After that you can install new software as well as upgrate them because now manager knows about available packages.</p>
+<h3>Usefull comand to manipulate file system</h3>
+<p><em>pwd</em> - current directory;</p>
+<p><em>ls</em> - list of the content in the current diectory;</p>
+<div class="highlight"><pre><span></span>ls -l
+</pre></div>
+
+
+<p>To show detail list</p>
+<p><em>cd</em> - change directory</p>
+<h3>Create a new directory</h3>
+<div class="highlight"><pre><span></span>mkdir &lt;dirname&gt;
+</pre></div>
+
+
+<h3>Create an empty file</h3>
+<div class="highlight"><pre><span></span>touch &lt;filename&gt;
+</pre></div>
+
+
+<h3>Print out someting</h3>
+<div class="highlight"><pre><span></span><span class="x">echo &#39;Hi&#39;</span>
+<span class="x">echo </span><span class="p">$</span><span class="nv">PATH</span><span class="x"></span>
+</pre></div>
+
+
+<h3>Write a string to file</h3>
+<div class="highlight"><pre><span></span>echo &#39;hello&#39; &gt; &lt;filename&gt;
+echo &#39;hello&#39; &gt;&gt; &lt;filename&gt;
+</pre></div>
+
+
+<h3>Print out the content of the file</h3>
+<div class="highlight"><pre><span></span>cat &lt;filename&gt;
+</pre></div>
+
+
+<h3>Print out the content of the file dinamicaly</h3>
+<div class="highlight"><pre><span></span>tail -n 20 -f &lt;path-to-file&gt;
+</pre></div>
+
+
+<h3>Edit file with nano</h3>
+<div class="highlight"><pre><span></span>nano &lt;path-to-file&gt;
+</pre></div>
+
+
+<h2>Copy files</h2>
+<div class="highlight"><pre><span></span>cp &lt;source&gt; &lt;destination&gt;
+</pre></div>
+
+
+<h2>Remove files</h2>
+<div class="highlight"><pre><span></span>rm &lt;path-to-file&gt;
+</pre></div>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
