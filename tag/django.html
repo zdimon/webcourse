@@ -1,37 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-        <meta charset="utf-8" />
-        <title>web course - django</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>django - web course</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+
+    <meta name="author" content="Dmitry Zharikov" />
+    <meta name="keywords" content="django" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="web course" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="web course"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="web course"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">web course </a></h1>
-                <nav><ul>
-    
-                        <li><a href="/">Web course</a></li>
-                    <li><a href="/category/bash.html">bash</a></li>
-                    <li><a href="/category/css.html">css</a></li>
-                    <li><a href="/category/django.html">django</a></li>
-                    <li><a href="/category/linux.html">linux</a></li>
-                    <li><a href="/category/python.html">python</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/django-static-page-application.html">Static pages applicaion.</a></h1>
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-<span>| tags: <a href="/tag/django.html">django</a><a href="/tag/python.html">python</a></span>
-</footer><!-- /.post-info --><h2>Dlango. Static pages applicaion.</h2>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+web course            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/bash.html">Bash</a>
+                        </li>
+                        <li >
+                            <a href="/category/css.html">Css</a>
+                        </li>
+                        <li >
+                            <a href="/category/django.html">Django</a>
+                        </li>
+                        <li >
+                            <a href="/category/linux.html">Linux</a>
+                        </li>
+                        <li >
+                            <a href="/category/python.html">Python</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <article>
+                <h2><a href="/django-static-page-application.html">Static pages applicaion.</a></h2>
+                <div class="summary"><h2>Dlango. Static pages applicaion.</h2>
 <p>We will use django-ckeditor-updated package for wisiwig editor.
 Make sure that you have instalated this packages:</p>
 <div class="highlight"><pre><span></span>Django==1.10
@@ -44,71 +91,14 @@ django-ckeditor-updated==4.4
 </pre></div>
 
 
-<p>Attribute -r means that requirements.txt is not the name of the packege but resource file.</p>
-<p>To start our application and create a new directory launch this command:</p>
-<div class="highlight"><pre><span></span>./manage.py startapp pages
-</pre></div>
-
-
-<p>Edit page/models.py and add model (table).</p>
-<div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-<span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;Title&#39;</span><span class="p">)</span>
-    <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">meta_content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
-    <span class="n">meta_title</span> <span class="o">=</span>   <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
-    <span class="n">meta_keywords</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
-    <span class="n">slug</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;Magic word&#39;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
-</pre></div>
-
-
-<p>Add the page application to INSTALLED_APPS list.</p>
-<div class="highlight"><pre><span></span>INSTALLED_APPS = [
-    &#39;django.contrib.admin&#39;,
-    ....
-    &#39;page&#39;,
-]
-</pre></div>
-
-
-<p>Create tables.</p>
-<div class="highlight"><pre><span></span>./manage.py makemigrations
-./manage.py migrate
-</pre></div>
-
-
-<p>Running server.</p>
-<div class="highlight"><pre><span></span>./manage.py runserver 5555
-</pre></div>
-
-
-<p>Enable admin interface page/admin.py.</p>
-<div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
-<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
-<span class="kn">from</span> <span class="nn">page.models</span> <span class="kn">import</span> <span class="n">Page</span>
-
-<span class="k">class</span> <span class="nc">PageAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
-    <span class="k">pass</span>
-
-<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">PageAdmin</span><span class="p">)</span>
-</pre></div>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/django-index-template.html" rel="bookmark"
-                           title="Permalink to Django. Index template.">Django. Index template.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-<span>| tags: <a href="/tag/django.html">django</a><a href="/tag/template.html">template</a></span>
-</footer><!-- /.post-info -->                <h1>Django. Index template.</h1>
+<p>Attribute -r means ...</p>
+                    <a class="btn btn-default btn-xs" href="/django-static-page-application.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/django-index-template.html">Django. Index template.</a></h2>
+                <div class="summary"><h1>Django. Index template.</h1>
 <h2>Template directory.</h2>
 <p>Create a new directory "templates" in the project directory.
 Add the file base.html inside it.</p>
@@ -125,20 +115,48 @@ Add the file base.html inside it.</p>
   <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;node_modules/bootstrap/dist/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
 
   <span class="c">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements ...</span></pre></div>
-                <a class="readmore" href="/django-index-template.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
+                    <a class="btn btn-default btn-xs" href="/django-index-template.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Dmitry Zharikov
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
 
 </body>
 </html>

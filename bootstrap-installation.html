@@ -1,42 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-        <meta charset="utf-8" />
-        <title>Bootstrap installation.</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>Bootstrap installation. - web course</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+<link rel="canonical" href="/bootstrap-installation.html">
+
+        <meta name="author" content="Dmitry Zharikov" />
+        <meta name="description" content="Bootstrap. Bootstrap is the most popular HTML, CSS, and JS framework for developing projects on the web. Installation. npm install bootstrap Package.json. { &#34;name&#34;: &#34;&#34;, &#34;version&#34;: &#34;0.0.1&#34;, &#34;author&#34;: &#34;&#34;, &#34;description&#34;: &#34;blabla&#34;, &#34;license&#34;: &#34;FREEEE&#34;, &#34;dependencies&#34;: {} } Installing with saving dependencies. npm install bootstrap --save Make sure that you have npm and nodejs ..." />
+
+        <meta property="og:site_name" content="web course" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Bootstrap installation."/>
+        <meta property="og:url" content="/bootstrap-installation.html"/>
+        <meta property="og:description" content="Bootstrap. Bootstrap is the most popular HTML, CSS, and JS framework for developing projects on the web. Installation. npm install bootstrap Package.json. { &#34;name&#34;: &#34;&#34;, &#34;version&#34;: &#34;0.0.1&#34;, &#34;author&#34;: &#34;&#34;, &#34;description&#34;: &#34;blabla&#34;, &#34;license&#34;: &#34;FREEEE&#34;, &#34;dependencies&#34;: {} } Installing with saving dependencies. npm install bootstrap --save Make sure that you have npm and nodejs ..."/>
+        <meta property="article:published_time" content="2016-11-04" />
+            <meta property="article:section" content="css" />
+            <meta property="article:author" content="Dmitry Zharikov" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">web course </a></h1>
-                <nav><ul>
-    
-                        <li><a href="/">Web course</a></li>
-                    <li><a href="/category/bash.html">bash</a></li>
-                    <li class="active"><a href="/category/css.html">css</a></li>
-                    <li><a href="/category/django.html">django</a></li>
-                    <li><a href="/category/linux.html">linux</a></li>
-                    <li><a href="/category/python.html">python</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/bootstrap-installation.html" rel="bookmark"
-           title="Permalink to Bootstrap installation.">Bootstrap installation.</a></h1>
-    </header>
-
-    <div class="entry-content">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+web course            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/bash.html">Bash</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/css.html">Css</a>
+                        </li>
+                        <li >
+                            <a href="/category/django.html">Django</a>
+                        </li>
+                        <li >
+                            <a href="/category/linux.html">Linux</a>
+                        </li>
+                        <li >
+                            <a href="/category/python.html">Python</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/bootstrap-installation.html"
+                       rel="bookmark"
+                       title="Permalink to Bootstrap installation.">
+                        Bootstrap installation.
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
 <footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-11-04T16:38:52.276298+01:00"> Пт. 04 Ноябрь 2016</time>
+    </span>
 
-</footer><!-- /.post-info -->      <h2>Bootstrap.</h2>
+
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h2>Bootstrap.</h2>
 <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing projects on the web.</p>
 <h3>Installation.</h3>
 <div class="highlight"><pre><span></span>npm install bootstrap
@@ -92,16 +162,48 @@ To build bootstrap files you have to be inside bootstrap folder and run this com
 <p>Regenerates the /dist/ directory with compiled and minified CSS and JavaScript files.</p>
 <h4>grunt watch</h4>
 <p>Watches the Less source files and automatically recompiles them to CSS whenever you save a change.</p>
-    </div><!-- /.entry-content -->
+            </div>
+            <!-- /.entry-content -->
+        </article>
+    </section>
 
-  </article>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+
+
+
+
+    </ul>
 </section>
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Dmitry Zharikov
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
 
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
 
 </body>
 </html>

@@ -1,37 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-        <meta charset="utf-8" />
-        <title>web course - Dmitry Zharikov</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>Articles by Dmitry Zharikov - web course</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+
+        <meta name="author" content="Dmitry Zharikov" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="web course" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="web course"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="web course"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">web course </a></h1>
-                <nav><ul>
-    
-                        <li><a href="/">Web course</a></li>
-                    <li><a href="/category/bash.html">bash</a></li>
-                    <li><a href="/category/css.html">css</a></li>
-                    <li><a href="/category/django.html">django</a></li>
-                    <li><a href="/category/linux.html">linux</a></li>
-                    <li><a href="/category/python.html">python</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/run-python-script.html">Run python script</a></h1>
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info --><h2>Run python script</h2>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+web course            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/bash.html">Bash</a>
+                        </li>
+                        <li >
+                            <a href="/category/css.html">Css</a>
+                        </li>
+                        <li >
+                            <a href="/category/django.html">Django</a>
+                        </li>
+                        <li >
+                            <a href="/category/linux.html">Linux</a>
+                        </li>
+                        <li >
+                            <a href="/category/python.html">Python</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <article>
+                <h2><a href="/run-python-script.html">Run python script</a></h2>
+                <div class="summary"><h2>Run python script</h2>
 <p>Every python script has a .py extention.
 Let's create our first "Hello world" programm.</p>
 <div class="highlight"><pre><span></span>echo &#39;print &quot;Hello World&quot; &#39; &gt; hello.py
@@ -43,42 +89,14 @@ Let's create our first "Hello world" programm.</p>
 </pre></div>
 
 
-<p>But there is another and more convenient way how to execute python script without mentioning 'python' in command line. 
-Add this line at the begining of out script.</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
-</pre></div>
-</td></tr></table>
-
-<p>Than mark the file as executable.</p>
-<div class="highlight"><pre><span></span>chmod +x hello.py
-</pre></div>
-
-
-<p>Now we can run it just like that</p>
-<div class="highlight"><pre><span></span>./hello.py
-</pre></div>
-
-
-<h3>Execute string as python code.</h3>
-<div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;print &#39;Hello World!&#39;&quot;</span>
-<span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;import sys; print sys.path&quot;</span>
-</pre></div>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/ssh-connection.html" rel="bookmark"
-                           title="Permalink to Remote server">Remote server</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info -->                <h2>FirstVDS</h2>
+<p>But there is another and ...</p>
+                    <a class="btn btn-default btn-xs" href="/run-python-script.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/ssh-connection.html">Remote server</a></h2>
+                <div class="summary"><h2>FirstVDS</h2>
 <h2>Providers</h2>
 <p>firstvds.ru
 https://www.hetzner.de/en/</p>
@@ -92,42 +110,26 @@ administrators with a secure way
 to access a remote computer. </p>
 <ul>
 <li>log in ...</li></ul>
-                <a class="readmore" href="/ssh-connection.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/linux-manage-users.html" rel="bookmark"
-                           title="Permalink to Manage with users in Linux.">Manage with users in Linux.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info -->                <h2>Manage with users in Linux.</h2>
+                    <a class="btn btn-default btn-xs" href="/ssh-connection.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/linux-manage-users.html">Manage with users in Linux.</a></h2>
+                <div class="summary"><h2>Manage with users in Linux.</h2>
 <h3>/etc/passwd</h3>
 <p>Contains one line for each user account.</p>
 <p>Username:Password:User ID:Group ID:User ID Info:Home directory:Command/shell</p>
 <p>Password - An x character indicates that encrypted password is stored in /etc/shadow file.</p>
 <p>User ID (UID): </p>
 <p>0 (zero) is reserved for root ...</p>
-                <a class="readmore" href="/linux-manage-users.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/django-static-page-application.html" rel="bookmark"
-                           title="Permalink to Static pages applicaion.">Static pages applicaion.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-<span>| tags: <a href="/tag/django.html">django</a><a href="/tag/python.html">python</a></span>
-</footer><!-- /.post-info -->                <h2>Dlango. Static pages applicaion.</h2>
+                    <a class="btn btn-default btn-xs" href="/linux-manage-users.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/django-static-page-application.html">Static pages applicaion.</a></h2>
+                <div class="summary"><h2>Dlango. Static pages applicaion.</h2>
 <p>We will use django-ckeditor-updated package for wisiwig editor.
 Make sure that you have instalated this packages:</p>
 <div class="highlight"><pre><span></span>Django==1.10
@@ -141,21 +143,13 @@ django-ckeditor-updated==4.4
 
 
 <p>Attribute -r means ...</p>
-                <a class="readmore" href="/django-static-page-application.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/bash-aliases.html" rel="bookmark"
-                           title="Permalink to Bash aliases">Bash aliases</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-<span>| tags: <a href="/tag/bash.html">bash</a></span>
-</footer><!-- /.post-info -->                <h1>Bash aliases.</h1>
+                    <a class="btn btn-default btn-xs" href="/django-static-page-application.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/bash-aliases.html">Bash aliases</a></h2>
+                <div class="summary"><h1>Bash aliases.</h1>
 <h3>Alias.</h3>
 <p>This is a short name of your command.
 Define yor aliases you can in .bashrc</p>
@@ -167,21 +161,13 @@ alias mmk=&#39;./manage.py makemigrations&#39;
 
 <p>After this you need to restart your terminal to apply changes. </p>
 <p>Or create a special file .bash_aliases for ...</p>
-                <a class="readmore" href="/bash-aliases.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/bootstrap-installation.html" rel="bookmark"
-                           title="Permalink to Bootstrap installation.">Bootstrap installation.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info -->                <h2>Bootstrap.</h2>
+                    <a class="btn btn-default btn-xs" href="/bash-aliases.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/bootstrap-installation.html">Bootstrap installation.</a></h2>
+                <div class="summary"><h2>Bootstrap.</h2>
 <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing projects on the web.</p>
 <h3>Installation.</h3>
 <div class="highlight"><pre><span></span>npm install bootstrap
@@ -206,40 +192,24 @@ alias mmk=&#39;./manage.py makemigrations&#39;
 
 
 <p>Make sure that you have npm and nodejs ...</p>
-                <a class="readmore" href="/bootstrap-installation.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/django-template-inheritance.html" rel="bookmark"
-                           title="Permalink to Django. Template inheritance.">Django. Template inheritance.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info -->                <h1>Django. Template inheritance.</h1>
+                    <a class="btn btn-default btn-xs" href="/bootstrap-installation.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/django-template-inheritance.html">Django. Template inheritance.</a></h2>
+                <div class="summary"><h1>Django. Template inheritance.</h1>
 <p>Now we going to define an area in the center  of every page and put the content inside.
 We will get the content from the database according to the parameter witch comes from url.</p>
 <h2>Define center block.</h2>
 <p>Edit base.html file and put this lines in it ...</p>
-                <a class="readmore" href="/django-template-inheritance.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/django-static.html" rel="bookmark"
-                           title="Permalink to Django. Static folder.">Django. Static folder.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info -->                <h1>Django. Static folder.</h1>
+                    <a class="btn btn-default btn-xs" href="/django-template-inheritance.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/django-static.html">Django. Static folder.</a></h2>
+                <div class="summary"><h1>Django. Static folder.</h1>
 <h2>settings.py</h2>
 <p>.....
   STATIC_URL = '/static/'</p>
@@ -249,21 +219,13 @@ We will get the content from the database according to the parameter witch comes
 <p>Create "static" folder inside project's directory.</p>
 <p>Create simlink to the node_modules folder above your BASE_DIR.</p>
 <p>ln -s /home/zdimon/www/doc/courses/prj/node_modules /home/zdimon/www/doc/courses/prj/master/static/node_modules</p>
-                <a class="readmore" href="/django-static.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/django-index-template.html" rel="bookmark"
-                           title="Permalink to Django. Index template.">Django. Index template.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-<span>| tags: <a href="/tag/django.html">django</a><a href="/tag/template.html">template</a></span>
-</footer><!-- /.post-info -->                <h1>Django. Index template.</h1>
+                    <a class="btn btn-default btn-xs" href="/django-static.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/django-index-template.html">Django. Index template.</a></h2>
+                <div class="summary"><h1>Django. Index template.</h1>
 <h2>Template directory.</h2>
 <p>Create a new directory "templates" in the project directory.
 Add the file base.html inside it.</p>
@@ -280,21 +242,13 @@ Add the file base.html inside it.</p>
   <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;node_modules/bootstrap/dist/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
 
   <span class="c">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements ...</span></pre></div>
-                <a class="readmore" href="/django-index-template.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/linux-administration.html" rel="bookmark"
-                           title="Permalink to Linux packages administration">Linux packages administration</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info -->                <h2>Linux packages administration.</h2>
+                    <a class="btn btn-default btn-xs" href="/django-index-template.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/linux-administration.html">Linux packages administration</a></h2>
+                <div class="summary"><h2>Linux packages administration.</h2>
 <p><a href="/webcourse/linux-administration.html">link.</a></p>
 <h3>APT Advanced Packaging Tool</h3>
 <p>It is perfoming such function as:</p>
@@ -312,21 +266,57 @@ Add the file base.html inside it.</p>
 </li>
 </ul>
 <p><em>sudo</em> - because we need the right to ...</p>
-                <a class="readmore" href="/linux-administration.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 2
-        <a href="/author/dmitry-zharikov2.html">&raquo;</a>
-</p>
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
+                    <a class="btn btn-default btn-xs" href="/linux-administration.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
+        <ul class="pagination">
+                <li class="prev disabled"><a href="#">&laquo;</a></li>
+                    <li class="active"><a
+                            href="/author/dmitry-zharikov.html">1</a></li>
+                    <li class=""><a
+                            href="/author/dmitry-zharikov2.html">2</a></li>
+                <li class="next"><a
+                        href="/author/dmitry-zharikov2.html">&raquo;</a></li>
+        </ul>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Dmitry Zharikov
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
 
 </body>
 </html>

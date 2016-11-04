@@ -1,37 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-        <meta charset="utf-8" />
-        <title>web course - linux</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>linux - web course</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+
+    <meta name="author" content="Dmitry Zharikov" />
+    <meta name="keywords" content="linux" />
+
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="web course" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="web course"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="web course"/>
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">web course </a></h1>
-                <nav><ul>
-    
-                        <li><a href="/">Web course</a></li>
-                    <li><a href="/category/bash.html">bash</a></li>
-                    <li><a href="/category/css.html">css</a></li>
-                    <li><a href="/category/django.html">django</a></li>
-                    <li class="active"><a href="/category/linux.html">linux</a></li>
-                    <li><a href="/category/python.html">python</a></li>
-                </ul>
-                </nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/ssh-connection.html">Remote server</a></h1>
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info --><h2>FirstVDS</h2>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+web course            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="/category/bash.html">Bash</a>
+                        </li>
+                        <li >
+                            <a href="/category/css.html">Css</a>
+                        </li>
+                        <li >
+                            <a href="/category/django.html">Django</a>
+                        </li>
+                        <li class="active">
+                            <a href="/category/linux.html">Linux</a>
+                        </li>
+                        <li >
+                            <a href="/category/python.html">Python</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            <article>
+                <h2><a href="/ssh-connection.html">Remote server</a></h2>
+                <div class="summary"><h2>FirstVDS</h2>
 <h2>Providers</h2>
 <p>firstvds.ru
 https://www.hetzner.de/en/</p>
@@ -44,59 +91,27 @@ is a network protocol that provides
 administrators with a secure way 
 to access a remote computer. </p>
 <ul>
-<li>log in</li>
-<li>managing systems, apps</li>
-<li>moving files</li>
-<li>running commands</li>
-</ul>
-<h2>Getting access</h2>
-<div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">root</span><span class="mf">@188.120.236.206</span>
-</pre></div>
-
-
-<h2>SSH key</h2>
-<div class="highlight"><pre><span></span>ssh-copy-id user@host
-</pre></div>
-
-
-<p>188.120.241.104 - tinyserver</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/linux-manage-users.html" rel="bookmark"
-                           title="Permalink to Manage with users in Linux.">Manage with users in Linux.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info -->                <h2>Manage with users in Linux.</h2>
+<li>log in ...</li></ul>
+                    <a class="btn btn-default btn-xs" href="/ssh-connection.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/linux-manage-users.html">Manage with users in Linux.</a></h2>
+                <div class="summary"><h2>Manage with users in Linux.</h2>
 <h3>/etc/passwd</h3>
 <p>Contains one line for each user account.</p>
 <p>Username:Password:User ID:Group ID:User ID Info:Home directory:Command/shell</p>
 <p>Password - An x character indicates that encrypted password is stored in /etc/shadow file.</p>
 <p>User ID (UID): </p>
 <p>0 (zero) is reserved for root ...</p>
-                <a class="readmore" href="/linux-manage-users.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/linux-administration.html" rel="bookmark"
-                           title="Permalink to Linux packages administration">Linux packages administration</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <span>Пт. 04 Ноябрь 2016</span>
-
-</footer><!-- /.post-info -->                <h2>Linux packages administration.</h2>
+                    <a class="btn btn-default btn-xs" href="/linux-manage-users.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="/linux-administration.html">Linux packages administration</a></h2>
+                <div class="summary"><h2>Linux packages administration.</h2>
 <p><a href="/webcourse/linux-administration.html">link.</a></p>
 <h3>APT Advanced Packaging Tool</h3>
 <p>It is perfoming such function as:</p>
@@ -114,20 +129,48 @@ to access a remote computer. </p>
 </li>
 </ul>
 <p><em>sudo</em> - because we need the right to ...</p>
-                <a class="readmore" href="/linux-administration.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
+                    <a class="btn btn-default btn-xs" href="/linux-administration.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-        <footer id="contentinfo" class="body">
-                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
-        </footer><!-- /#contentinfo -->
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+
+
+
+
+
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2016 Dmitry Zharikov
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
 
 </body>
 </html>
