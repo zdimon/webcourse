@@ -15,12 +15,42 @@
                 <h1><a href="/">web course </a></h1>
                 <nav><ul>
                     <li><a href="/">Web course</a></li>
-                    <li><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/bash.html">bash</a></li>
+                    <li><a href="/category/css.html">css</a></li>
+                    <li><a href="/category/django.html">django</a></li>
+                    <li><a href="/category/linux.html">linux</a></li>
+                    <li><a href="/category/python.html">python</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
                 <section id="content" class="body">
                     <ol id="posts-list" class="hfeed" start="9">
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/django-commands.html" rel="bookmark"
+                           title="Permalink to Django. Commands.">Django. Commands.</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-04T15:31:03.566658+01:00">
+                Published: Пт. 04 Ноябрь 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
+        </address>
+<p>In <a href="/category/python.html">python</a>.</p>
+
+</footer><!-- /.post-info -->                <h1>Django commands</h1>
+<p>To register a new command we need to add a <strong>managment/commands</strong> direclory to our application. Each folder should containe <code>__init</code>__.py to indicate that this folders should be concern as the packages.</p>
+<h2>Simple example</h2>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">django.core.management.base</span> <span class="kn">import</span> <span class="n">BaseCommand</span><span class="p">,</span> <span class="n">CommandError</span>
+<span class="kn">from</span> <span class="nn">page.models</span> <span class="kn">import ...</span></pre></div>
+                <a class="readmore" href="/django-commands.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
             <li><article class="hentry">
                 <header>
                     <h1><a href="/virtual-environment.html" rel="bookmark"
@@ -36,7 +66,7 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
         </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>In <a href="/category/python.html">python</a>.</p>
 
 </footer><!-- /.post-info -->                <h2>Pythov virtual environment</h2>
 <p>A Virtual Environment is a tool to keep the dependencies required by different projects in separate places, by creating virtual Python environments for them.</p>
@@ -56,40 +86,6 @@
 
             <li><article class="hentry">
                 <header>
-                    <h1><a href="/run-python-script.html" rel="bookmark"
-                           title="Permalink to Run python script">Run python script</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-11-04T15:12:08.730419+01:00">
-                Published: Пт. 04 Ноябрь 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
-
-</footer><!-- /.post-info -->                <h2>Run python script</h2>
-<p>Every python script has a .py extention.
-Let's create our first "Hello world" programm.</p>
-<div class="highlight"><pre><span></span>echo &#39;print &quot;Hello World&quot; &#39; &gt; hello.py
-</pre></div>
-
-
-<p>To run it we need to execute 'python' command and put a script name as a first parameter.</p>
-<div class="highlight"><pre><span></span>python hello.py
-</pre></div>
-
-
-<p>But there is another and ...</p>
-                <a class="readmore" href="/run-python-script.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
                     <h1><a href="/pelican-installation-and-setting.html" rel="bookmark"
                            title="Permalink to Pelican installation and setting.">Pelican installation and setting.</a></h1>
                 </header>
@@ -103,7 +99,7 @@ Let's create our first "Hello world" programm.</p>
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
         </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>In <a href="/category/python.html">python</a>.</p>
 
 </footer><!-- /.post-info -->                <h1>Pelican</h1>
 <h2>Creating a new project.</h2>
@@ -133,7 +129,7 @@ pelican-quickstart
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
         </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>In <a href="/category/python.html">python</a>.</p>
 
 </footer><!-- /.post-info -->                <h1>Agenda</h1>
 <ol>

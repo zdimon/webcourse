@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>web course - linux</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">web course </a></h1>
+                <nav><ul>
+                    <li><a href="/">Web course</a></li>
+                    <li><a href="/category/bash.html">bash</a></li>
+                    <li><a href="/category/css.html">css</a></li>
+                    <li><a href="/category/django.html">django</a></li>
+                    <li class="active"><a href="/category/linux.html">linux</a></li>
+                    <li><a href="/category/python.html">python</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/ssh-connection.html">Remote server</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-11-04T16:39:24.428041+01:00">
+                Published: Пт. 04 Ноябрь 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
+        </address>
+<p>In <a href="/category/linux.html">linux</a>.</p>
+
+</footer><!-- /.post-info --><h2>FirstVDS</h2>
+<h2>Providers</h2>
+<p>firstvds.ru
+https://www.hetzner.de/en/</p>
+<h3>Virtual machines manager.</h3>
+<p>https://my.firstvds.ru/manager/billmgr
+https://ceres.ispsystem.net:1500/vemgr</p>
+<h2>SSH</h2>
+<p>SSH, also known as Secure Socket Shell, 
+is a network protocol that provides 
+administrators with a secure way 
+to access a remote computer. </p>
+<ul>
+<li>log in</li>
+<li>managing systems, apps</li>
+<li>moving files</li>
+<li>running commands</li>
+</ul>
+<h2>Getting access</h2>
+<div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="n">root</span><span class="mf">@188.120.236.206</span>
+</pre></div>
+
+
+<h2>SSH key</h2>
+<div class="highlight"><pre><span></span>ssh-copy-id user@host
+</pre></div>
+
+
+<p>188.120.241.104 - tinyserver</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/linux-manage-users.html" rel="bookmark"
+                           title="Permalink to Manage with users in Linux.">Manage with users in Linux.</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-04T16:39:16.284106+01:00">
+                Published: Пт. 04 Ноябрь 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
+        </address>
+<p>In <a href="/category/linux.html">linux</a>.</p>
+
+</footer><!-- /.post-info -->                <h2>Manage with users in Linux.</h2>
+<h3>/etc/passwd</h3>
+<p>Contains one line for each user account.</p>
+<p>Username:Password:User ID:Group ID:User ID Info:Home directory:Command/shell</p>
+<p>Password - An x character indicates that encrypted password is stored in /etc/shadow file.</p>
+<p>User ID (UID): </p>
+<p>0 (zero) is reserved for root ...</p>
+                <a class="readmore" href="/linux-manage-users.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/linux-administration.html" rel="bookmark"
+                           title="Permalink to Linux packages administration">Linux packages administration</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-04T16:37:09.377124+01:00">
+                Published: Пт. 04 Ноябрь 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
+        </address>
+<p>In <a href="/category/linux.html">linux</a>.</p>
+
+</footer><!-- /.post-info -->                <h2>Linux packages administration.</h2>
+<p><a href="/webcourse/linux-administration.html">link.</a></p>
+<h3>APT Advanced Packaging Tool</h3>
+<p>It is perfoming such function as:</p>
+<ul>
+<li>installation of new software</li>
+<li>removing software</li>
+<li>upgrade and update of existing software</li>
+<li>updating of the package list index</li>
+<li>
+<p>upgrating entire Ubuntu system</p>
+</li>
+<li>
+<p>Install a Package</p>
+<p>sudo apt-get install mc</p>
+</li>
+</ul>
+<p><em>sudo</em> - because we need the right to ...</p>
+                <a class="readmore" href="/linux-administration.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

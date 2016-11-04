@@ -15,24 +15,113 @@
                 <h1><a href="/">web course </a></h1>
                 <nav><ul>
                     <li><a href="/">Web course</a></li>
-                    <li><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/bash.html">bash</a></li>
+                    <li><a href="/category/css.html">css</a></li>
+                    <li><a href="/category/django.html">django</a></li>
+                    <li><a href="/category/linux.html">linux</a></li>
+                    <li><a href="/category/python.html">python</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/django-index-template.html">Django. Index template.</a></h1>
+                    <h1 class="entry-title"><a href="/django-static-page-application.html">Static pages applicaion.</a></h1>
 <footer class="post-info">
-        <abbr class="published" title="2016-11-04T15:54:52.821699+01:00">
+        <abbr class="published" title="2016-11-04T16:39:08.340170+01:00">
                 Published: Пт. 04 Ноябрь 2016
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
         </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
+<p>In <a href="/category/django.html">django</a>.</p>
+<p>tags: <a href="/tag/django.html">django</a> <a href="/tag/python.html">python</a> </p>
+</footer><!-- /.post-info --><h2>Dlango. Static pages applicaion.</h2>
+<p>We will use django-ckeditor-updated package for wisiwig editor.
+Make sure that you have instalated this packages:</p>
+<div class="highlight"><pre><span></span>Django==1.10
+django-ckeditor-updated==4.4
+</pre></div>
+
+
+<p>You can put them into requirements.txt file and the inslall isung pip installer this way:</p>
+<div class="highlight"><pre><span></span>pip install -r requirements.txt
+</pre></div>
+
+
+<p>Attribute -r means that requirements.txt is not the name of the packege but resource file.</p>
+<p>To start our application and create a new directory launch this command:</p>
+<div class="highlight"><pre><span></span>./manage.py startapp pages
+</pre></div>
+
+
+<p>Edit page/models.py and add model (table).</p>
+<div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
+<span class="k">class</span> <span class="nc">Page</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;Title&#39;</span><span class="p">)</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">meta_content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+    <span class="n">meta_title</span> <span class="o">=</span>   <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+    <span class="n">meta_keywords</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
+    <span class="n">slug</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;Magic word&#39;</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">250</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Add the page application to INSTALLED_APPS list.</p>
+<div class="highlight"><pre><span></span>INSTALLED_APPS = [
+    &#39;django.contrib.admin&#39;,
+    ....
+    &#39;page&#39;,
+]
+</pre></div>
+
+
+<p>Create tables.</p>
+<div class="highlight"><pre><span></span>./manage.py makemigrations
+./manage.py migrate
+</pre></div>
+
+
+<p>Running server.</p>
+<div class="highlight"><pre><span></span>./manage.py runserver 5555
+</pre></div>
+
+
+<p>Enable admin interface page/admin.py.</p>
+<div class="highlight"><pre><span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+<span class="kn">from</span> <span class="nn">django.contrib</span> <span class="kn">import</span> <span class="n">admin</span>
+<span class="kn">from</span> <span class="nn">page.models</span> <span class="kn">import</span> <span class="n">Page</span>
+
+<span class="k">class</span> <span class="nc">PageAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">Page</span><span class="p">,</span> <span class="n">PageAdmin</span><span class="p">)</span>
+</pre></div>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/django-index-template.html" rel="bookmark"
+                           title="Permalink to Django. Index template.">Django. Index template.</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-11-04T16:37:37.200900+01:00">
+                Published: Пт. 04 Ноябрь 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
+        </address>
+<p>In <a href="/category/django.html">django</a>.</p>
 <p>tags: <a href="/tag/django.html">django</a> <a href="/tag/template.html">template</a> </p>
-</footer><!-- /.post-info --><h1>Django. Index template.</h1>
+</footer><!-- /.post-info -->                <h1>Django. Index template.</h1>
 <h2>Template directory.</h2>
 <p>Create a new directory "templates" in the project directory.
 Add the file base.html inside it.</p>
@@ -48,96 +137,8 @@ Add the file base.html inside it.</p>
 <div class="highlight"><pre><span></span>  <span class="c">&lt;!-- Bootstrap --&gt;</span>
   <span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;node_modules/bootstrap/dist/css/bootstrap.min.css&quot;</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span><span class="nt">&gt;</span>
 
-  <span class="c">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries --&gt;</span>
-  <span class="c">&lt;!-- WARNING: Respond.js doesn&#39;t work if you view the page via file:// --&gt;</span>
-  <span class="c">&lt;!--[if lt IE 9]&gt;</span>
-<span class="c">    &lt;script src=&quot;https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js&quot;&gt;&lt;/script&gt;</span>
-<span class="c">    &lt;script src=&quot;https://oss.maxcdn.com/respond/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;</span>
-<span class="c">  &lt;![endif]--&gt;</span>
-<span class="nt">&lt;/head&gt;</span>
-<span class="nt">&lt;body&gt;</span>
-
-
-  <span class="c">&lt;!-- jQuery (necessary for Bootstrap&#39;s JavaScript plugins) --&gt;</span>
-  <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-
-
-  <span class="c">&lt;!-- navigation bar --&gt;</span>
-  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">&quot;navbar navbar-inverse navbar-fixed-top&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;navbar&quot;</span> <span class="na">class=</span><span class="s">&quot;collapse navbar-collapse&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;nav navbar-nav&quot;</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;active&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#&quot;</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#about&quot;</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-          <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;#contact&quot;</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;/ul&gt;</span>
-      <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!--/.nav-collapse --&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;/nav&gt;</span>
-
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;container&quot;</span> <span class="na">style=</span><span class="s">&quot;padding-top: 60px&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;h1&gt;</span>Hello, world!<span class="nt">&lt;/h1&gt;</span>
-  <span class="nt">&lt;/div&gt;</span>
-
-  <span class="c">&lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;</span>
-  <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;node_modules/bootstrap/dist/js/bootstrap.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
-<span class="nt">&lt;/body&gt;</span>
-</pre></div>
-
-
-<p></html></p>
-<h2>page/View.py</h2>
-<p>...
-  from django.shortcuts import render_to_response
-  ...</p>
-<p>def index(request):
-      return  render_to_response('base.html')</p>
-<h2>Define template folder in settings.py.</h2>
-<p>TEMPLATES = [
-      {
-          'BACKEND': 'django.template.backends.django.DjangoTemplates',
-          'DIRS': [os.path.join(BASE_DIR, 'templates')],
-          ...
-      },
-  ]</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/django-static-page-application.html" rel="bookmark"
-                           title="Permalink to Static pages applicaion.">Static pages applicaion.</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2016-11-04T15:24:23.712024+01:00">
-                Published: Пт. 04 Ноябрь 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/author/dmitry-zharikov.html">Dmitry Zharikov</a>
-        </address>
-<p>In <a href="/category/misc.html">misc</a>.</p>
-<p>tags: <a href="/tag/django.html">django</a> <a href="/tag/python.html">python</a> </p>
-</footer><!-- /.post-info -->                <h2>Dlango. Static pages applicaion.</h2>
-<p>We will use django-ckeditor-updated package for wisiwig editor.
-Make sure that you have instalated this packages:</p>
-<div class="highlight"><pre><span></span>Django==1.10
-django-ckeditor-updated==4.4
-</pre></div>
-
-
-<p>You can put them into requirements.txt file and the inslall isung pip installer this way:</p>
-<div class="highlight"><pre><span></span>pip install -r requirements.txt
-</pre></div>
-
-
-<p>Attribute -r means ...</p>
-                <a class="readmore" href="/django-static-page-application.html">read more</a>
+  <span class="c">&lt;!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements ...</span></pre></div>
+                <a class="readmore" href="/django-index-template.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
